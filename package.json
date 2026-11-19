@@ -1,0 +1,28 @@
+{
+  "name": "ai-sdk-agent-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One failing test, four ways: rules, one prompt, an agent loop, and the same agent on a server. Built with the Vercel AI SDK.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "rules": "node src/cli.ts rules",
+    "prompt": "node --env-file-if-exists=.env src/cli.ts prompt",
+    "agent": "node --env-file-if-exists=.env src/cli.ts agent",
+    "server": "node --env-file-if-exists=.env src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "ai": "^7.0.177",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^5.1.1"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
